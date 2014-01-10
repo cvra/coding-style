@@ -41,6 +41,15 @@ Of course, this is inconsistent, but :
 1. Kernighan and Ritchie cannot be wrong, right ?
 2. In C, functions are not standard blocks : they cannot be nested.
 
+So functions definition look like this :
+
+```cpp
+void do_something_useful(void)
+{
+    // Code goes here
+}
+```
+
 ## Naming conventions
 * Do *not* use CamelCaseNotation, use underscore_notation instead.
 * Short variable names are ok if they are still understandable : `i` is ok for a loop counter, but `foo` for a function name isn't.
