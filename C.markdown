@@ -51,6 +51,23 @@ void do_something_useful(void)
 }
 ```
 
+Do not unnecessarily use braces where a single statement will do.
+```cpp
+if(x == 42)
+    do_stuff();
+```
+
+This does not apply if only one branch of a conditional statement is a single statement; in the latter case use braces in both branches:
+
+```cpp
+if(x == 42) {
+    do_stuff(); 
+} else {
+    do_stuff_a();
+    do_stuff_b();
+}
+```
+
 ## Naming conventions
 * Do *not* use CamelCaseNotation, use underscore_notation instead.
 * Short variable names are ok if they are still understandable : `i` is ok for a loop counter, but `foo` for a function name isn't.
