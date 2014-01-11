@@ -4,7 +4,7 @@
 * Indent with 4 spaces, not tabs.
 * End file with a new line (as requested per C99 standard).
 * Use empty line to divide code into logical chunks.
-* Put spaces around operator : `x <= 2 && y > 10` is way easier to read than `x<=2&&y>10`.
+* Put spaces around binary operators : `x <= 2 && y > 10` is way easier to read than `x<=2&&y>10`.
 
 ## Placing braces
 For this, we will follow the good old prophets of C : Kernighan and Ritchie.
