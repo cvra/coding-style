@@ -5,6 +5,7 @@
 * End file with a new line (as requested per C99 standard).
 * Use empty line to divide code into logical chunks.
 * Put spaces around binary operators : `x <= 2 && y > 10` is way easier to read than `x<=2&&y>10`.
+* Put spaces after the following keywords : `if`, `switch`, `case`, `for`, `do`, `while`.
 
 ## Placing braces
 For this, we will follow the good old prophets of C : Kernighan and Ritchie.
@@ -12,7 +13,7 @@ It also happens to be the rule of the Linux Kernel.
 The way the prophets taught us is to put the opening brace last on the line and the closing brace first :
 
 ```cpp
-if(x == 42) {
+if (x == 42) {
     // do stuff
 }
 ```
@@ -21,9 +22,9 @@ Note that the closing brace is always on its own line except if it is followed b
 of the same statement, for example in a `do..while` block or in an `if..else` block :
 
 ```cpp
-if(x == 42) {
+if (x == 42) {
     // do stuff
-} else if(x == 34) {
+} else if (x == 34) {
     // do something else
 } else {
     // do yet another thingie
@@ -33,7 +34,7 @@ if(x == 42) {
 ```cpp
 do {
     // do stuff
-} while(x < 42);
+} while (x < 42);
 ```
 
 The only exceptions to this rule are functions : the opening brace should be on its own line.
@@ -53,15 +54,16 @@ void do_something_useful(void)
 
 Do not unnecessarily use braces where a single statement will do.
 ```cpp
-if(x == 42)
+if (x == 42)
     do_stuff();
 ```
 
 This does not apply if only one branch of a conditional statement is a single statement; in the latter case use braces in both branches:
 
 ```cpp
-if(x == 42) {
-    do_stuff(); 
+if (x == 42) {
+    do_stuff();
+
 } else {
     do_stuff_a();
     do_stuff_b();
