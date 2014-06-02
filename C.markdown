@@ -52,21 +52,20 @@ void do_something_useful(void)
 }
 ```
 
-Do not unnecessarily use braces where a single statement will do.
+Always use braces.
+This avoids mistakes and improves readability, without costing much of your time.
+Don't do this :
+
 ```cpp
 if (x == 42)
     do_stuff();
 ```
 
-This does not apply if only one branch of a conditional statement is a single statement; in the latter case use braces in both branches:
+But this :
 
 ```cpp
 if (x == 42) {
     do_stuff();
-
-} else {
-    do_stuff_a();
-    do_stuff_b();
 }
 ```
 
