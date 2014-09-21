@@ -75,7 +75,7 @@ if (x == 42) {
 * If you *really* need a global variable, but it can live with file-only scope, declare it with the `static` keyword.
 * Private fields of exported structs are to be prefixed by an underscore `_`
 ```cpp
-struct foo {
+struct foo_t {
     int bar; //public field
     int _baz; // private field
 };
