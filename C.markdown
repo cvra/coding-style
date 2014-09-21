@@ -73,6 +73,13 @@ if (x == 42) {
 * Do *not* use CamelCaseNotation, use underscore_notation instead.
 * Short variable names are ok if they are still understandable : `i` is ok for a loop counter, but `foo` for a function name isn't.
 * If you *really* need a global variable, but it can live with file-only scope, declare it with the `static` keyword.
+* Private fields of exported structs are to be prefixed by an underscore `_`
+```cpp
+struct foo {
+    int bar; //public field
+    int _baz; // private field
+};
+```
 
 ## Vim users
 To have the same indentation convention as used here, put the following in your vimrc :
