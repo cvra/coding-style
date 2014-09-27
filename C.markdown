@@ -74,6 +74,27 @@ if (x == 42) {
 * Short variable names are ok if they are still understandable : `i` is ok for a loop counter, but `foo` for a function name isn't.
 * If you *really* need a global variable, but it can live with file-only scope, declare it with the `static` keyword.
 
+## Interaction with C++
+To allow for easy inclusion of your headers in C++ files, you should put `extern "C"` in your header.
+If you don't do this, you will get weird link time error because of C++ name mangling.
+
+For example:
+```cpp
+#ifndef MYHEADER_H_
+#define MYHEADER_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Snip */
+
+#ifdef __cplusplus
+}
+#endif
+#endif
+```
+
 ## Vim users
 To have the same indentation convention as used here, put the following in your vimrc :
 
