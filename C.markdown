@@ -74,6 +74,17 @@ if (x == 42) {
 * Short variable names are ok if they are still understandable : `i` is ok for a loop counter, but `foo` for a function name isn't.
 * If you *really* need a global variable, but it can live with file-only scope, declare it with the `static` keyword.
 
+## Checking for platform specific code
+Sometimes you want to know if you are building code for the development or the real environment.
+You can detect Linux, OSX (and proably BSD) by doing it like this :
+```cpp
+#if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
+/* Testing code */
+#else
+/* Real code */
+#endif
+```
+
 ## Interaction with C++
 To allow for easy inclusion of your headers in C++ files, you should put `extern "C"` in your header.
 If you don't do this, you will get weird link time error because of C++ name mangling.
