@@ -95,6 +95,17 @@ extern "C" {
 #endif
 ```
 
+## Uncrustify integration
+This repository contains a configuration script for [Uncrustify](http://uncrustify.sourceforge.net/) to allow automated formatting of C/C++ source.
+It is not perfectly tuned yet, feel free to open a PR if you notice anything that doesn't match above coding style/good sense.
+
+It can be used like this (also works on header files):
+
+```bash
+$ uncrustify -c uncrustify.cfg --replace --no-backup /path/to/my/program.c
+```
+
+
 ## Vim users
 To have the same indentation convention as used here, put the following in your vimrc :
 
